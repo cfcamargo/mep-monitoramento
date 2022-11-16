@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="./src/assets/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> 
     
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.12/dist/css/uikit.min.css" />
@@ -18,18 +18,20 @@
   </head>
   <body>
     <header class="h-[100px] flex items-center fixed top-0 bg-white w-full z-50" id="header">
-      <div class="container flex justify-between items-center w-full mx-auto">
+      <div class="containeer flex justify-between items-center w-full mx-auto">
         <img src="./src/assets/logo-letering.png" alt="Logo Com escrita MEP" class="w-32">
-        <nav class="flex xs:flex-col md:flex-row md:w-auto xs:w-full md:h-auto xs:h-screen xs:bg-white md:bg-none xs:absolute md:static xs:inset-0 xs:justify-center xs:items-center xs:gap-20 md:gap-4" id="menu">
-          <button class="border-none bg-none xs:flex md:hidden absolute top-4 right-4 toggle-menu"> X </button>
+        <nav class="transition xs:hidden md:flex xs:flex-col md:flex-row md:w-auto xs:w-0 md:h-auto xs:h-screen xs:bg-white md:bg-none xs:absolute md:static xs:inset-0 xs:justify-center xs:items-center xs:gap-20 md:gap-4" id="menu">
+          <button class="border-none bg-none xs:flex md:hidden absolute top-4 right-4 toggle-menu justify-center items-center"> 
+            <img src="./src/assets/close-icon.svg" alt="" class="w-8">   
+          </button>
           <a href="#banner" class="text-dark-green font-bold hover:text-lime-green">Home</a>
           <a href="#about" class="text-dark-green font-bold hover:text-lime-green">Sobre</a>
           <a href="#services" class="text-dark-green font-bold hover:text-lime-green">Serviços</a>
           <a href="" class="text-dark-green font-bold hover:text-lime-green">Contato</a>
           <a href="" class="text-dark-green font-bold hover:text-lime-green">Links</a>
         </nav>
-        <button class="xs:flex md:hidden toggle-menu" >
-
+        <button class="xs:flex md:hidden toggle-menu justify-center items-center">
+          <img src="./src/assets/menu-icon.svg" alt="" class="w-8">
         </button>
       </div>
     </header>
@@ -47,7 +49,7 @@
 
 
       <section id="resume" class="pt-16">
-        <div class="container mx-auto pt-14">
+        <div class="containeer mx-auto pt-14">
           <h3 class="xs:text-2xl md:text-4xl text-center xs:w-full md:w-[1000px] mx-auto font-bold text-dark-green">As pragas podem ser uma dor de cabeça. Mas o que você pode fazer para monitorar as pragas e proteger sua colheita?</h3>
           <div class="grid gap-2 xs:grid-cols-1 md:grid-cols-2 items-center py-16">
             <div id="resume-slider">
@@ -105,7 +107,7 @@
       <div id="divisor"></div>
 
       <section id="about" class="py-16">
-        <div class="container grid xs:grid-cols-1 md:grid-cols-2 gap-8 mx-auto items-center">
+        <div class="containeer grid xs:grid-cols-1 md:grid-cols-2 gap-8 mx-auto items-center">
           <div class="flex flex-col gap-8">
             <div class="flex flex-col gap-4">
               <h4 class="text-3xl font-bold text-dark-green">Quem Somos ?</h4>
@@ -128,7 +130,7 @@
       <div class="w-full h-2 bg-dark-green"></div>
 
       <section id="services">
-        <div class="container py-24 mx-auto flex flex-col items-center">
+        <div class="containeer py-24 mx-auto flex flex-col items-center">
           <h4 class="text-4xl border-l-4 border-lime-green px-4 text-dark-green font-bold">Nossos Serviços</h4>
 
           <div class="w-full flex flex-col items-center mt-12">
@@ -210,6 +212,21 @@
                   <ul class="uk-slider-nav uk-dotnav w-full flex justify-center py-2"></ul>
               
                 </div>
+              </div>
+            </div>
+
+            <div class="grid xs:grid-cols-1 md:grid-cols-2 gap-8 xs:py-0 md:py-20 items-center justify-center">
+              <div>
+                <img src="./src/assets/mapa-calor.png" alt="Mapa de NDVI com varias cores">
+              </div>
+
+              <div class="flex flex-col gap-4 py-12">
+                <h4 class="text-3xl text-dark-green font-bold border-b-2 border-dark-green py-2">Monitoramento da qualidade
+                  de plantio</h4>
+
+                <p class="mt-4">O monitoramento de pragas na lavoura é fundamental na tomada de decisão. Essa prática determina a situação das pragas na cultura, avalia os danos e prejuízos que podem estar ocorrendo e define o momento da aplicação de inseticida.</p>
+                <p>Por meio do monitoramento é possível estabelecer os níveis de dano e níveis de controle das pragas, antes população de pragas atingir um número de indivíduos que possam causar danos à lavoura</p>
+                <p>Com as informações podemos melhorar a tomada de decisão, e torna-la mais acertiva, entendendo quais pragas estao ocorrendo na área, e quais os inimigos naturais delas presentas.</p>
               </div>
             </div>
 
