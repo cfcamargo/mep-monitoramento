@@ -16,19 +16,21 @@
 <body class="bg-[url('/src/assets/links-bg.png')] w-full h-screen bg-cover bg-center"> 
   <main>
     <div class="w-full h-screen bg-black bg-opacity-70 px-4 py-2 flex justify-center items-center">
-      <div class="w-full max-w-[500px] bg-dark-green shadow-md px-16 py-10">
+      <div class="w-full max-w-[500px] bg-dark-green shadow-md xs:px-4 md:px-16 xs:py-6 md:py-10 rounded">
         <div class="w-full flex justify-start flex-col">
-          <a href="/"> 
+          <a href="/" class="xs:hidden md:flex w-10"> 
             <img src="./src/assets/icons/ArrowLeft.png" alt="Seta apontando para o lado esquerdo">
           </a>
-          <div class="rounded-full mx-auto bg-white px-2 py-2 flex justify-center items-center">
-            <img src="./src/assets/logo.png" alt="" class="w-[120px]">
+          <div class="flex flex-col gap-4 xs:mt-6 md:mt-0">
+            <div class="rounded-full mx-auto bg-white px-2 py-2 flex justify-center items-center border-4 border-lime-green overflow-hidden">
+              <img src="./src/assets/logo.png" alt="" class="xs:w-32 md:w-[120px]">
+            </div>
+            <div class="flex flex-1 flex-col items-center xs:mt-0 md:mt-8 text-ligth w-full">
+              <h3 class="font-bold text-center xs:text-sm md:text-base">MEP | MANEJO ESTRATÉGICO DE PRAGAS</h3>
+              <span>Nossos Contatos:</span>
+            </div>
           </div>
-          <div class="flex flex-col items-center mt-8 text-ligth">
-            <h3 class="font-bold">MEP | MANEJO ESTRATÉGICO DE PRAGAS</h3>
-            <span class="mt-2">Nossos Contatos:</span>
-          </div>
-          <nav class="flex flex-col gap-4 mt-6">
+          <nav class="flex flex-col gap-4 xs:mt-2 md:mt-6">
             <a href="https://api.whatsapp.com/send?phone=5567996212579&text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20melhor%20os%20servi%C3%A7os%20oferecidos%20pela%20MEP" class="flex gap-2 bg-ligth justify-center items-center px-4 py-2 rounded hover:brightness-90">
               <img src="./src/assets/icons/whatsappgreen.png" alt="whatsapp logo">
               <span>Consultor: Alex Freire</span>
