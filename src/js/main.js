@@ -23,3 +23,22 @@ window.addEventListener('resize', function () {
   if (largura > 1000) 
     nav.classList.remove('active');
 });
+
+
+
+
+var telInput = document.querySelector('#tel-input');
+var telOptions = {
+  mask: '(00)0 0000-0000'
+};
+const telInputMasked = IMask(telInput, telOptions);
+
+document.querySelector('form').addEventListener("submit", (e) => {
+  e.preventDefault()
+})
+
+const dateLabel = document.querySelector('#actual-year')
+const actualDate = new Date().getFullYear()
+console.log(actualDate)
+
+dateLabel.innerHTML = actualDate

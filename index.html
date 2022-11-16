@@ -12,6 +12,8 @@
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.12/dist/css/uikit.min.css" />
 
+    <script src="https://unpkg.com/imask"></script>
+
     <link rel="stylesheet" href="./src/css/style.css">
     
     <title>MEP | Manejo Estratégico de Pragas</title>
@@ -27,7 +29,7 @@
           <a href="#banner" class="text-dark-green font-bold hover:text-lime-green">Home</a>
           <a href="#about" class="text-dark-green font-bold hover:text-lime-green">Sobre</a>
           <a href="#services" class="text-dark-green font-bold hover:text-lime-green">Serviços</a>
-          <a href="" class="text-dark-green font-bold hover:text-lime-green">Contato</a>
+          <a href="#contact" class="text-dark-green font-bold hover:text-lime-green">Contato</a>
           <a href="" class="text-dark-green font-bold hover:text-lime-green">Links</a>
         </nav>
         <button class="xs:flex md:hidden toggle-menu justify-center items-center">
@@ -36,7 +38,7 @@
       </div>
     </header>
 
-    <main class="mt-[100px]">
+    <main class="mt-[100px] bg-[url('/src/assets/bg.png')] bg-no-repeat bg-fixed">
       <section id="banner" class="bg-[url('/src/assets/banner.png')] bg-cover bg-center w-full h-[calc(100vh_-_100px)] flex- flex-col">
         <div id="opacity" class="w-full h-[calc(100vh_-_100px)] bg-black bg-opacity-80 border-b-8 border-lime-green">
             <div id="content" class="flex flex-col gap-2 items-center justify-center h-full xs:max-w-[320px] md:max-w-[800px] mx-auto text-ligth">
@@ -153,7 +155,7 @@
               <div class="flex flex-col gap-4 py-12">
                 <h4 class="text-3xl text-dark-green font-bold border-b-2 border-dark-green py-2">Padrão de Monitoramento</h4>
 
-                <ul id="service-list" class="list-disc pr-8">
+                <ul id="service-list" class="list-disc pr-8 pl-6">
                   <li>Mapas e relatórios completos</li>
                   <li>Visão geral da propriedade com nível de infestação de praga por talhão</li>
                   <li>Detalhe dos dados coletados em cada ponto amostral</li>
@@ -216,8 +218,8 @@
             </div>
 
             <div class="grid xs:grid-cols-1 md:grid-cols-2 gap-8 xs:py-0 md:py-20 items-center justify-center">
-              <div>
-                <img src="./src/assets/mapa-calor.png" alt="Mapa de NDVI com varias cores">
+              <div class="h-[500px] object-cover xs:pr-0 md:pr-36 xs:mt-16 md:mt-0">
+                <img src="./src/assets/trena.jpg" alt="Mapa de NDVI com varias cores" class="w-full object-cover">
               </div>
 
               <div class="flex flex-col gap-4 py-12">
@@ -230,12 +232,117 @@
               </div>
             </div>
 
+            <div class="grid xs:grid-cols-1 md:grid-cols-2 gap-8 xs:py-0 md:py-20 items-center justify-center">
+             
+              <div class="flex flex-col gap-4 py-12">
+                <p class="mt-4">E muito importante o produtor ter esses dados, pois doses de fungicida por exemplo, podem depender de área foliar presente na lavoura, e isso é ligado diretamente a população.</p>
+                <p>Sabemos que o potencial produtivo de uma lavoura, é medido no momento do plantio, de modo que uma boa plantabilidade, em conjunto com alguns outros fatores como fertilidade, e tipo de semente influenciam diretamente no atingimento de altas produtividades.</p>
+                
+                <ul class="list-disc pl-6">
+                  <h4 class="my-8 text-2xl font-bold -ml-6">Principais fatores que influenciam a plantabilidade</h4>
+
+                  <li>Indicência de luz sobre cada planta</li>
+                  <li>Disponibilidade de água no solo</li>
+                  <li>Inibição de pragas e invasoras</li>
+                  <li>Diponibilidade de nutrientes</li>
+                </ul>
+              </div>
+
+              <div class="h-[500px] object-cover xs:pl-0 md:pl-36">
+                <img src="./src/assets/lines.png" alt="Mapa de NDVI com varias cores" class="w-full object-cover">
+              </div>
+            </div>
+
           </div>
 
         </div>
 
         
       </section>
+
+      <section id="contact" class="w-full h-screen bg-[url('/src/assets/banner.png')] bg-cover bg-center mt-16 border-t-8 border-lime-green">
+        <div class="container mx-auto relative">
+          <div class="w-full max-w-[700px] h-[calc(100vh_+_80px)] bg-ligth absolute -top-[44px] rounded shadow-md flex flex-col px-8 justify-center">
+            <header class="flex flex-col gap-4 text-dark-green">
+              <h4 class="text-2xl text-dark-green font-bold">Deseja que nosso time entre em contato?</h4>
+
+              <p>Se deseja receber nosso contato, para orçamentos, ou dúvidas preencha o 
+                formulário que nosso time entra em contato.</p>
+            </header>
+
+            <form action="" class="mt-8 flex flex-col gap-4" id="contact-form">
+              <div class="flex flex-col items-stretch gap-2">
+                <label for="name">Nome</label>
+                <input type="text" id="name" class="px-2 py-4 rounded text-dark-green focus:border-none focus:outline-lime-green" placeholder="Digite seu nome">
+              </div>
+
+              <div class="flex flex-col items-stretch gap-2">
+                <label for="tel-input">Telefone</label>
+                <input type="text" id="tel-input" class="px-2 py-4 rounded text-dark-green focus:border-none focus:outline-lime-green" placeholder="(67) 9 0000-0000" >
+              </div>
+
+              <div class="flex flex-col items-stretch gap-2">
+                <label for="email-input">Email</label>
+                <input type="email" id="email-input" class="px-2 py-4 rounded text-dark-green focus:border-none focus:outline-lime-green" placeholder="email@email.com" >
+              </div>
+
+              <div class="flex flex-col items-stretch gap-2">
+                <label for="message-input">Email</label>
+                <textarea name="message-input" id="message-input" class="w-full px-2 py-4 rounded focus:border-none focus:outline-lime-green" rows="10"></textarea>
+              </div>
+
+              <button type="submit" class="w-full flex items-center justify-center py-4 bg-dark-green text-ligth rounded hover:bg-green-900">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+      <footer class="bg-dark-green w-full pt-16">
+        <div class="container flex flex-col justify-center items-center mx-auto">
+          <h3 class="text-4xl text-ligth text-center mt-28 max-w-[500px]">Se preferir, você pode utilizar nossos canais de contato</h3>
+
+          <div>
+            <div class="w-full flex md:flex-row xs:flex-col gap-20 items-center py-20">
+              <a href="https://www.instagram.com/mep_monitoramento/" class="flex items-center gap-2 text-ligth hover:text-lime-green">
+                <img src="./src/assets/icons/instagram.png" alt="Instagram Icon" class="w-8">
+                <span>@mepmonitoramento</span>
+              </a>
+
+              <a href="https://api.whatsapp.com/send?phone=5567996212579&text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20melhor%20os%20servi%C3%A7os%20oferecidos%20pela%20MEP" class="flex items-center gap-2 text-ligth hover:text-lime-green">
+                <img src="./src/assets/icons/whatsapp.png" alt="Instagram Icon" class="w-8">
+                <span>Alex Freire</span>
+              </a>
+
+              <a href="mailto:consultoria@mepmonitoramento.com.br" class="flex items-center gap-2 text-ligth hover:text-lime-green">
+                <img src="./src/assets/icons/email.png" alt="Instagram Icon" class="w-8">
+                <span>consultoria@mepmonitoramento.com.br</span>
+              </a>
+            </div>
+            <div class="w-full flex justify-center">
+              <a href="https://goo.gl/maps/CYULrQntSZhdDZPk7" class="flex items-center justify-center gap-2">
+                <img src="./src/assets/icons/pin.png" alt="Instagram Icon" class="h-8">
+                <div class="flex flex-col w-60 text-ligth hover:text-lime-green">
+                  <span>Rua baltazar saldanha, 295</span>
+                  <span>Centro - Ponta Porã - MS</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white mt-16 py-8 border-b-8 border-lime-green">
+          <div class="container mx-auto flex xs:flex-col md:flex-row items-center justify-between">
+            <div>
+              <img src="/src/assets/logo.png" alt="">
+            </div>
+            <div class="flex xs:items-center justify-center md:items-end flex-col">
+              <span class="text-xs">MEP - MANEJO ESTRATÉGICO DE PRAGAS <span>&#169;</span></span>
+              <p class="text-xs">TODOS OS DIREITOS RESERVADOS | 2021-<span id="actual-year"></span></p>
+            </div>
+          </div>
+        </div>
+      </footer>
 
 
     </main>
