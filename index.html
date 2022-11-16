@@ -4,7 +4,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="./src/assets/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,21 +17,25 @@
     <title>MEP | Manejo Estratégico de Pragas</title>
   </head>
   <body>
-    <header class="h-[100px] flex items-center fixed top-0 bg-white w-full" id="header">
+    <header class="h-[100px] flex items-center fixed top-0 bg-white w-full z-50" id="header">
       <div class="container flex justify-between items-center w-full mx-auto">
         <img src="./src/assets/logo-letering.png" alt="Logo Com escrita MEP" class="w-32">
-        <nav class="flex gap-4">
-          <a href="#home" class="text-dark-green font-bold hover:text-lime-green">Home</a>
+        <nav class="flex xs:flex-col md:flex-row md:w-auto xs:w-full md:h-auto xs:h-screen xs:bg-white md:bg-none xs:absolute md:static xs:inset-0 xs:justify-center xs:items-center xs:gap-20 md:gap-4" id="menu">
+          <button class="border-none bg-none xs:flex md:hidden absolute top-4 right-4 toggle-menu"> X </button>
+          <a href="#banner" class="text-dark-green font-bold hover:text-lime-green">Home</a>
           <a href="#about" class="text-dark-green font-bold hover:text-lime-green">Sobre</a>
-          <a href="" class="text-dark-green font-bold hover:text-lime-green">Serviços</a>
+          <a href="#services" class="text-dark-green font-bold hover:text-lime-green">Serviços</a>
           <a href="" class="text-dark-green font-bold hover:text-lime-green">Contato</a>
           <a href="" class="text-dark-green font-bold hover:text-lime-green">Links</a>
         </nav>
+        <button class="xs:flex md:hidden toggle-menu" >
+
+        </button>
       </div>
     </header>
 
     <main class="mt-[100px]">
-      <div id="banner" class="bg-[url('/src/assets/banner.png')] bg-cover bg-center w-full h-[calc(100vh_-_100px)] flex- flex-col">
+      <section id="banner" class="bg-[url('/src/assets/banner.png')] bg-cover bg-center w-full h-[calc(100vh_-_100px)] flex- flex-col">
         <div id="opacity" class="w-full h-[calc(100vh_-_100px)] bg-black bg-opacity-80 border-b-8 border-lime-green">
             <div id="content" class="flex flex-col gap-2 items-center justify-center h-full xs:max-w-[320px] md:max-w-[800px] mx-auto text-ligth">
               <h2 class="xs:text-2xl md:text-5xl text-white text-bold text-center">Combata as pragas da sua lavoura com maior eficiência !</h2>
@@ -39,71 +43,182 @@
               <p class="text-white text-center">Apoiamos o produtor rural no monitoramento das principais pragas do soja e do milho, auxiliando assim em uma melhor tomada de decisão.</p>
             </div>
         </div>
-      </div>
+      </section>
 
 
-      <div id="resume" class="pt-16">
+      <section id="resume" class="pt-16">
         <div class="container mx-auto pt-14">
           <h3 class="xs:text-2xl md:text-4xl text-center xs:w-full md:w-[1000px] mx-auto font-bold text-dark-green">As pragas podem ser uma dor de cabeça. Mas o que você pode fazer para monitorar as pragas e proteger sua colheita?</h3>
           <div class="grid gap-2 xs:grid-cols-1 md:grid-cols-2 items-center py-16">
             <div id="resume-slider">
-              <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-                <ul class="px-10 mx-auto uk-slider-items gap-4">
+              <div class="uk-position-relative uk-visible-toggle uk-light p-0" tabindex="-1" uk-slider="center: true">
+                <ul class="uk-slider-items uk-grid p-0">
                     <li>
-                        <div class="h-[330px]">
-                            <img src="./src/assets/images/1.jpg" width="204" height="330" alt="">
+                        <div class="uk-panel h-96 object-cover">
+                            <img src="./src/assets/images/1.jpg" width="220" height="450" alt="">
                         </div>
                     </li>
 
                     <li>
-                      <div class="h-[330px]">
-                          <img src="./src/assets/images/2.jpg" width="204" height="330" alt="">
+                      <div class="uk-panel h-96 object-cover p-0">
+                          <img src="./src/assets/images/2.jpg" width="220" height="450" alt="">
                       </div>
                     </li>
 
                     <li>
-                      <div class="h-[330px]">
-                          <img src="./src/assets/images/3.jpg" width="204" height="330" alt="">
+                      <div class="uk-panel h-96 object-cover p-0">
+                          <img src="./src/assets/images/3.jpg" width="220" height="450" alt="">
                       </div>
                     </li>
 
                     <li>
-                      <div class="h-[330px]">
-                          <img src="./src/assets/images/4.jpg" width="204" height="330" alt="">
+                      <div class="uk-panel h-96 object-cover p-0">
+                          <img src="./src/assets/images/4.jpg" width="220" height="450" alt="">
                       </div>
                     </li>
 
                     <li>
-                      <div class="h-[330px]">
-                          <img src="./src/assets/images/5.jpg" width="204" height="330" alt="">
+                      <div class="uk-panel h-96 object-cover p-0">
+                          <img src="./src/assets/images/5.jpg" width="220" height="450" alt="">
                       </div>
                     </li>
-                  
                 </ul>
-                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover text-dark-green -mt-3" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover text-dark-green -mt-3" href="#" uk-slidenav-next uk-slider-item="next"></a>
 
-                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-                <div uk-slider="finite: true"></div>
-                
+                <ul class="uk-slider-nav uk-dotnav w-full flex justify-center py-2"></ul>
+            
               </div>
             </div>
 
-            <div class="flex-1 -mt-10">
-              <div class="w-[400px] mx-auto flex flex-col gap-2">
+            <div class="flex-1 xs:m-0 md:-mt-10 flex xs:justify-center md:justify-end w-full">
+              <div class="w-[400px] flex flex-col gap-4">
                 <p class="xs:text-center md:text-end">As pragas podem ser uma dor de cabeça para os agricultores, mas há algumas coisas que você pode fazer para monitorar as pragas e proteger sua colheita. Nossa empresa aborda alguns métodos que você pode usar para monitorar as pragas e proteger sua colheita.</p>
                 <p class="xs:text-center md:text-end">Fique atento aos sinais, e controle as mesmas para manter sua colheita saudável, resistente e garantir que haja uma boa produção em seu campo</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div id="divisor"></div>
 
-      <div id="about">
+      <section id="about" class="py-16">
+        <div class="container grid xs:grid-cols-1 md:grid-cols-2 gap-8 mx-auto items-center">
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-4">
+              <h4 class="text-3xl font-bold text-dark-green">Quem Somos ?</h4>
+              <p>A MEP foi criada, para ajudar o produtor rural em suas tomadas de decisões. Nossa equipe é treinada para trazer o melhor resultado, facilidade e certeza ao produtor.</p>
+              <p>Somos parceiros do agricultor, que preza por inovações, e acreditamos que o monitoramento de pragas é fundamental para o sucesso da lavoura. Por isso, contamos com uma equipe especializada, que ajuda o produtor na tomada de decisão, trazendo melhor acertividade, assim levando a uma melhor rentabilidade e produtividade.</p>
+            </div>
 
-      </div>
+            <div class="flex flex-col gap-4">
+              <h4 class="text-3xl font-bold text-dark-green">Missão</h4>
+              <p>Nossa missão é ajudar o produtor na sua tomada de decisões, levando até ele dados precisos, para que assim ele tenha mais precisão em seu manejo.</p>
+            </div>
+          </div>
+
+          <div class="w-full h-[600px]">
+            <img src="./src/assets/about-cover.png" alt="">
+          </div>
+        </div>
+      </section>
+
+      <div class="w-full h-2 bg-dark-green"></div>
+
+      <section id="services">
+        <div class="container py-24 mx-auto flex flex-col items-center">
+          <h4 class="text-4xl border-l-4 border-lime-green px-4 text-dark-green font-bold">Nossos Serviços</h4>
+
+          <div class="w-full flex flex-col items-center mt-12">
+          
+            <div class="grid xs:grid-cols-1 md:grid-cols-2 gap-8 xs:py-0 md:py-20 items-center justify-center">
+              <div>
+                <img src="./src/assets/mapa-calor.png" alt="Mapa de NDVI com varias cores">
+              </div>
+
+              <div class="flex flex-col gap-4 py-12">
+                <h4 class="text-3xl text-dark-green font-bold border-b-2 border-dark-green py-2">Monitoramento de Pragas</h4>
+
+                <p class="mt-4">O monitoramento de pragas na lavoura é fundamental na tomada de decisão. Essa prática determina a situação das pragas na cultura, avalia os danos e prejuízos que podem estar ocorrendo e define o momento da aplicação de inseticida.</p>
+                <p>Por meio do monitoramento é possível estabelecer os níveis de dano e níveis de controle das pragas, antes população de pragas atingir um número de indivíduos que possam causar danos à lavoura</p>
+                <p>Com as informações podemos melhorar a tomada de decisão, e torna-la mais acertiva, entendendo quais pragas estao ocorrendo na área, e quais os inimigos naturais delas presentas.</p>
+              </div>
+            </div>
+
+            <div class="grid xs:grid-cols-1 md:grid-cols-2 gap-8 xs:py-0 md:py-20 items-center justify-center">
+              <div class="flex flex-col gap-4 py-12">
+                <h4 class="text-3xl text-dark-green font-bold border-b-2 border-dark-green py-2">Padrão de Monitoramento</h4>
+
+                <ul id="service-list" class="list-disc pr-8">
+                  <li>Mapas e relatórios completos</li>
+                  <li>Visão geral da propriedade com nível de infestação de praga por talhão</li>
+                  <li>Detalhe dos dados coletados em cada ponto amostral</li>
+                  <li>Pontos de coleta georreferenciados</li>
+                  <li>Recomendações técnicas personalizadas.</li>
+                  <li>Visitas semanais, para acompanhamento de infestação.</li>
+                  <li>Acompanhamento nas aplicações</li>
+                  <li>Fotos sobre pontos importantes.</li>
+                  <li>Visita técnica para tomada de decisão</li>
+                </ul>
+                
+              </div>
+              <div>
+                <div class="uk-position-relative uk-visible-toggle uk-light p-0" tabindex="-1" uk-slider="center: true">
+                  <ul class="uk-slider-items uk-grid p-0">
+                      <li>
+                          <div class="uk-panel h-96 object-cover">
+                              <img src="./src/assets/images/6.jpg" width="220" height="450" alt="">
+                          </div>
+                      </li>
+
+                      <li>
+                        <div class="uk-panel h-96 object-cover p-0">
+                            <img src="./src/assets/images/7.jpg" width="220" height="450" alt="">
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="uk-panel h-96 object-cover p-0">
+                            <img src="./src/assets/images/8.jpg" width="220" height="450" alt="">
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="uk-panel h-96 object-cover p-0">
+                            <img src="./src/assets/images/9.jpg" width="220" height="450" alt="">
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="uk-panel h-96 object-cover p-0">
+                            <img src="./src/assets/images/10.jpg" width="220" height="450" alt="">
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="uk-panel h-96 object-cover p-0">
+                            <img src="./src/assets/images/11.jpg" width="220" height="450" alt="">
+                        </div>
+                      </li>
+                  </ul>
+              
+                  <a class="uk-position-center-left uk-position-small uk-hidden-hover text-dark-green -mt-3" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                  <a class="uk-position-center-right uk-position-small uk-hidden-hover text-dark-green -mt-3" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+                  <ul class="uk-slider-nav uk-dotnav w-full flex justify-center py-2"></ul>
+              
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        
+      </section>
 
 
     </main>
